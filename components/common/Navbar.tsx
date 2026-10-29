@@ -150,25 +150,25 @@ const Navbar = () => {
             }`}
         >
             {/* ================= TOP CONTACT BAR ================= */}
-            <div className="w-full bg-[#063A64] text-white text-[12px] sm:text-[13px] py-2 px-4 sm:px-6 lg:px-12 border-b border-white/10">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+            <div className="w-full bg-[#063A64] text-white text-[12px] sm:text-[13px] py-1.5 sm:py-2 px-4 sm:px-6 lg:px-12 border-b border-white/10 hidden sm:block">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-1.5 sm:gap-2">
                     {/* Left: Office Address */}
                     <div className="flex items-center gap-2 text-white/90">
-                        <MapPin className="h-4 w-4 text-[#00A3E0] shrink-0" />
-                        <span>Office No. A4B, Al Qusais, Dubai, UAE</span>
+                        <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#00A3E0] shrink-0" />
+                        <span className="truncate">Office No. A4B, Al Qusais, Dubai, UAE</span>
                     </div>
 
                     {/* Right: Phone & Email */}
-                    <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-white/90">
+                    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-white/90 text-xs sm:text-[13px]">
                         <a
                             href="tel:+97145936064"
-                            className="flex items-center gap-2 hover:text-[#00A3E0] transition-colors"
+                            className="flex items-center gap-1.5 sm:gap-2 hover:text-[#00A3E0] transition-colors"
                         >
                             <Phone className="h-3.5 w-3.5 text-[#00A3E0] shrink-0" />
                             <span>+971 4 593 6064</span>
                         </a>
 
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-1.5 sm:gap-2">
                             <Mail className="h-3.5 w-3.5 text-[#00A3E0] shrink-0" />
                             <a
                                 href="mailto:info@meditecengineering.com"
@@ -176,10 +176,10 @@ const Navbar = () => {
                             >
                                 info@meditecengineering.com
                             </a>
-                            <span className="text-white/40">|</span>
+                            <span className="text-white/40 hidden md:inline">|</span>
                             <a
                                 href="mailto:sales@meditecengineering.com"
-                                className="hover:text-[#00A3E0] transition-colors"
+                                className="hover:text-[#00A3E0] transition-colors hidden md:inline"
                             >
                                 sales@meditecengineering.com
                             </a>
@@ -190,7 +190,7 @@ const Navbar = () => {
 
             {/* ================= MAIN NAVBAR ================= */}
             <div className="w-full bg-white border-b border-slate-100">
-                <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12 py-3 flex items-center justify-between">
+                <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12 py-2 sm:py-2.5 lg:py-3 flex items-center justify-between">
                     {/* Meditec Circular Badge Logo */}
                     <Link
                         href="/"
@@ -203,12 +203,12 @@ const Navbar = () => {
                             height={80}
                             alt="Meditec Logo"
                             priority
-                            className="h-14 sm:h-16 w-auto object-contain transition-all duration-300"
+                            className="h-11 sm:h-13 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300"
                         />
                     </Link>
 
                     {/* Desktop Navigation Links — Center */}
-                    <nav className="hidden md:flex items-center gap-6 lg:gap-10">
+                    <nav className="hidden lg:flex items-center gap-6 xl:gap-9">
                         {navLinks.map((link) => {
                             if (link.name === "Solutions") {
                                 return (
@@ -241,7 +241,7 @@ const Navbar = () => {
 
                                         {/* Solutions Dropdown Menu */}
                                         {isDropdownOpen && (
-                                            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-72 z-50">
+                                             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-72 z-50">
                                                 <div className="rounded-xl bg-white border border-slate-200 p-2 shadow-xl space-y-1">
                                                     {solutionsList.length > 0 ? (
                                                         solutionsList.map((sol) => (
@@ -280,7 +280,7 @@ const Navbar = () => {
                     </nav>
 
                     {/* Desktop CTA Button */}
-                    <div className="hidden md:flex items-center">
+                    <div className="hidden lg:flex items-center">
                         <Link href="/contact">
                             <button className="bg-[#0771CB] hover:bg-[#0065A1] text-white font-medium text-[13px] tracking-wide px-5 py-2.5 rounded-[4px] flex items-center gap-2 transition-all duration-200 shadow-sm hover:shadow active:scale-95 uppercase cursor-pointer">
                                 <span>DISCUSS YOUR PROJECT</span>
@@ -292,7 +292,7 @@ const Navbar = () => {
                     {/* Mobile Hamburger Icon */}
                     <button
                         onClick={toggleMobileMenu}
-                        className="md:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 focus:outline-none transition-colors"
+                        className="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 focus:outline-none transition-colors"
                         aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                         aria-expanded={isMobileMenuOpen}
                     >
@@ -307,7 +307,7 @@ const Navbar = () => {
 
             {/* ================= MOBILE MENU DRAWER ================= */}
             <div
-                className={`md:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+                className={`lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300 ${
                     isMobileMenuOpen
                         ? "opacity-100 pointer-events-auto"
                         : "opacity-0 pointer-events-none"
@@ -317,7 +317,7 @@ const Navbar = () => {
             />
 
             <aside
-                className={`md:hidden fixed top-0 left-0 bottom-0 h-full w-[85%] max-w-[340px] bg-white text-slate-800 z-50 shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${
+                className={`lg:hidden fixed top-0 left-0 bottom-0 h-[100dvh] w-[85%] max-w-[340px] bg-white text-slate-800 z-50 shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${
                     isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
                 }`}
             >

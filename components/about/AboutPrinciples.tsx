@@ -69,7 +69,7 @@ const principles = [
 
 export default function AboutPrinciples() {
   return (
-    <section className="w-full bg-white py-10 sm:py-14 md:py-20">
+    <section className="w-full bg-white py-10 sm:pb-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         {/* ── Heading ── */}
         <motion.div
@@ -82,10 +82,10 @@ export default function AboutPrinciples() {
           <span className="font-roboto font-bold text-[#0078BF] uppercase tracking-widest text-xs sm:text-sm">
             CORE VALUES
           </span>
-          <h2 className="font-roboto font-semibold text-[#011540] text-2xl sm:text-3xl md:text-[38px] lg:text-[42px] leading-tight tracking-tight uppercase max-w-4xl">
+          <h2 className="font-roboto font-semibold text-[#011540] text-xl xs:text-2xl sm:text-3xl md:text-[38px] lg:text-[42px] leading-tight tracking-tight uppercase max-w-4xl px-2">
             PRACTICAL PROJECT STRENGTH
           </h2>
-          <p className="font-roboto text-[#5D666F] text-xs sm:text-sm md:text-base max-w-xl leading-relaxed">
+          <p className="font-roboto text-[#5D666F] text-xs sm:text-sm md:text-base max-w-xl leading-relaxed px-2">
             Qualified engineering, standards-based execution and practical after-sales support
           </p>
         </motion.div>
@@ -103,7 +103,7 @@ export default function AboutPrinciples() {
               key={p.num}
               variants={cardVariants}
               whileHover="hover"
-              className="group relative flex flex-col justify-between p-6 sm:p-7 md:p-8 bg-white border border-[#E9ECF1] rounded-sm shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_30px_rgba(1,21,64,0.06)] transition-all duration-300 min-h-[210px] sm:min-h-[250px] cursor-pointer overflow-hidden"
+              className="group relative flex flex-col justify-between p-5 sm:p-7 md:p-8 bg-white border border-[#E9ECF1] rounded-sm shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_30px_rgba(1,21,64,0.06)] transition-all duration-300 min-h-[190px] sm:min-h-[250px] cursor-pointer overflow-hidden"
             >
               {/* Sequential Border Drawing on Hover */}
               <motion.span

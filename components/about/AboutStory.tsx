@@ -196,20 +196,20 @@ export default function AboutStory() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeUp}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-6 pt-3 sm:pt-4 lg:px-12"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-6 pt-3 sm:pt-4 lg:px-8"
         >
           {stats.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div key={index} className="flex items-center gap-4 sm:gap-5">
+              <div key={index} className="flex items-center gap-3 sm:gap-5 p-2 sm:p-0">
                 <div className="shrink-0 flex items-center justify-center">
-                  <Icon className="w-8 h-8" />
+                  <Icon className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-roboto font-bold text-[#0B3B60] text-xl sm:text-[22px] leading-tight">
+                  <span className="font-roboto font-bold text-[#0B3B60] text-lg sm:text-xl lg:text-[22px] leading-tight">
                     {item.title}
                   </span>
-                  <span className="font-roboto font-normal text-[#5B6470] text-xs sm:text-sm leading-snug mt-0.5 sm:mt-1">
+                  <span className="font-roboto font-normal text-[#5B6470] text-[11px] sm:text-xs md:text-sm leading-snug mt-0.5 sm:mt-1">
                     {item.subtitle}
                   </span>
                 </div>

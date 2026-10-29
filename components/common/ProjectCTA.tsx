@@ -36,26 +36,26 @@ export default function ProjectCTA() {
             </div>
 
             {/* Heading */}
-            <h2 data-aos="fade-up" data-aos-delay="200" className="mt-1 sm:mt-3 max-w-[600px] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium uppercase leading-tight text-white">
+            <h2 data-aos="fade-up" data-aos-delay="200" className="mt-1 sm:mt-3 max-w-[600px] text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium uppercase leading-tight text-white px-2">
               Let&apos;s Discuss Your
               <br />
               Next Project
             </h2>
 
             {/* Benefits */}
-            <div data-aos="fade-up" data-aos-delay="300" className="mt-2 sm:mt-4 flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2">
-              <div className="flex items-center gap-1.5 text-xs sm:text-sm md:text-[16px] text-white">
-                <CalendarCheck className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" strokeWidth={1.5} />
+            <div data-aos="fade-up" data-aos-delay="300" className="mt-2 sm:mt-4 flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-6 gap-y-2 px-2">
+              <div className="flex items-center gap-1.5 text-[11px] sm:text-sm md:text-[16px] text-white">
+                <CalendarCheck className="h-3.5 w-3.5 sm:h-5 sm:w-5 shrink-0" strokeWidth={1.5} />
                 <span>Fast &amp; secure booking</span>
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs sm:text-sm md:text-[16px] text-white">
-                <Clock3 className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" strokeWidth={1.5} />
+              <div className="flex items-center gap-1.5 text-[11px] sm:text-sm md:text-[16px] text-white">
+                <Clock3 className="h-3.5 w-3.5 sm:h-5 sm:w-5 shrink-0" strokeWidth={1.5} />
                 <span>Flexible time slots</span>
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs sm:text-sm md:text-[16px] text-white">
-                <CircleUserRound className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" strokeWidth={1.5} />
+              <div className="flex items-center gap-1.5 text-[11px] sm:text-sm md:text-[16px] text-white">
+                <CircleUserRound className="h-3.5 w-3.5 sm:h-5 sm:w-5 shrink-0" strokeWidth={1.5} />
                 <span>In-person or virtual options</span>
               </div>
             </div>
