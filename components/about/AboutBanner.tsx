@@ -21,7 +21,7 @@ export default function AboutBanner() {
       {/* Background Image */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/images/home/Banner.png"
+          src="/images/about/banner.png"
           alt="Modern surgical operating theatre and medical infrastructure"
           fill
           priority
