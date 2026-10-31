@@ -261,7 +261,7 @@ export default function WhyMeditecHero({
             <li key={title} className="h-full">
               <Reveal from="up" delay={200 + i * 120} className="h-full">
                 <div className={`${glass} group flex h-full min-h-[105px] sm:min-h-[118px] flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-4 p-3.5 sm:px-5 sm:py-5 text-center sm:text-left`}>
-                  <Icon className="h-7 w-7 sm:h-9 sm:w-9 shrink-0 text-[#1fb8d6] transition-transform duration-500 ease-[cubic-bezier(.3,1.5,.5,1)] group-hover:rotate-[8deg] group-hover:scale-125 motion-reduce:transition-none motion-reduce:group-hover:transform-none" />
+                  <Icon className="h-7 w-7 sm:h-9 sm:w-9 shrink-0 text-[#1fb8d6]" />
                   <div className="flex-1 text-center">
                     <h4 className="mx-auto max-w-[130px] text-xs sm:text-sm md:text-[16px] lg:text-[17px] font-semibold uppercase leading-tight text-[#22c7f2]">
                       {title}

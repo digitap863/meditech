@@ -108,7 +108,7 @@ export default function WhyMeditec() {
           {FEATURES.map((f, i) => (
             <Reveal key={f.title} delay={200 + i * 120} className="h-full">
               <article className="group flex h-full min-h-[150px] sm:min-h-[172px] flex-col rounded-2xl sm:rounded-[20px] bg-[#d4f4fb] p-5 sm:px-5 sm:pb-[30px] sm:pt-7 transition-all duration-300 ease-out hover:-translate-y-2 hover:bg-[#c3eef8] hover:shadow-[0_16px_32px_-12px_rgba(10,127,208,0.3)] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
-                <BuildingIcon className="mb-4 sm:mb-6 h-8 w-8 sm:h-9 sm:w-9 text-[#12384f] transition-transform duration-500 ease-[cubic-bezier(.3,1.5,.5,1)] group-hover:-rotate-[4deg] group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:transform-none" />
+                <BuildingIcon className="mb-4 sm:mb-6 h-8 w-8 sm:h-9 sm:w-9 text-[#12384f]" />
                 <h3 className="mb-1.5 sm:mb-2 text-base sm:text-[18px] lg:text-[19px] font-semibold text-[#0a7fd0]">
                   {f.title}
                 </h3>
