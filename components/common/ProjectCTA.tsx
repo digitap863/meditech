@@ -30,7 +30,7 @@ export default function ProjectCTA() {
           {/* Content */}
           <div className="relative z-10 flex min-h-[360px] sm:min-h-[440px] lg:min-h-125 gap-4 sm:gap-5 flex-col items-center justify-center px-4 sm:px-6 py-6 sm:py-8 text-center">
             {/* Availability */}
-            <div data-aos="fade-down" data-aos-delay="100" className="flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs md:text-sm text-white backdrop-blur-md">
+            <div data-aos="fade-down" data-aos-delay="100" className="flex items-center gap-2 rounded-full  bg-white/10 px-3.5 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs md:text-sm text-white backdrop-blur-md">
               <span className="h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full bg-[#35D4E7] animate-pulse shrink-0" />
               <span>Available ~10AM to 08:30PM</span>
             </div>

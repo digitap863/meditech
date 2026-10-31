@@ -19,7 +19,7 @@ const specialities = [
 
 export default function HeroBanner() {
   return (
-    <section className="relative w-full overflow-hidden font-[family-name:var(--font-noto-sans)] min-h-[520px] sm:min-h-[560px] lg:h-[calc(100dvh-125px)] flex flex-col justify-between py-6 sm:py-8 lg:py-0">
+    <section className="relative w-full overflow-hidden font-[family-name:var(--font-noto-sans)] min-h-[calc(100dvh-250px)] sm:h-[calc(100dvh-125px)] flex flex-col justify-between py-6 sm:py-8 lg:py-0">
       {/* Background Image */}
       <div className="absolute inset-0 -z-20">
         <Image
@@ -65,7 +65,7 @@ export default function HeroBanner() {
 
       {/* Main content */}
       <div className="relative z-10 flex-1 flex items-center w-full py-4 sm:py-6 lg:py-0">
-        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 lg:px-20">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="max-w-2xl flex flex-col items-start text-left">
             {/* Category */}
             <p className="text-[11px] sm:text-xs md:text-sm font-normal uppercase tracking-[0.15em] text-[#00e5ff] mb-2.5 sm:mb-4">
@@ -110,8 +110,8 @@ export default function HeroBanner() {
       </div>
 
       {/* Bottom specialities strip */}
-      <div className="relative z-10 w-full py-3 sm:py-4 px-3 sm:px-6">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-2.5 sm:gap-x-3 md:gap-x-4 gap-y-1.5 sm:gap-y-2 text-center">
+      <div className="relative z-10 w-full py-3 sm:py-4 px-4 sm:px-6 lg:px-12">
+        <div className="max-w-8xl mx-auto flex flex-wrap items-center justify-center gap-x-2.5 sm:gap-x-3 md:gap-x-4 gap-y-1.5 sm:gap-y-2 text-center">
           {specialities.map((item, index) => (
             <div key={item} className="inline-flex items-center gap-2 sm:gap-3 md:gap-4">
               <span className="text-[10px] sm:text-xs font-medium text-[#48cae4] hover:text-white transition-colors tracking-wider uppercase cursor-default">

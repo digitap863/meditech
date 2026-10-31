@@ -1,4 +1,13 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import SolutionCard, { SolutionItem } from "./SolutionCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 export const solutionsData: SolutionItem[] = [
   {
@@ -86,6 +95,13 @@ export default function SolutionsSection({
   className = "",
   solutions = solutionsData,
 }: SolutionsSectionProps) {
+  const [isMounted, setIsMounted] = useState(false);
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <section
       id={id}
@@ -94,7 +110,7 @@ export default function SolutionsSection({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-16">
           <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-[#00A3E0] mb-3 select-none">
             OUR SOLUTIONS
           </p>
@@ -107,8 +123,57 @@ export default function SolutionsSection({
           </h2>
         </div>
 
-        {/* 8 Solutions Grid: 4 columns x 2 rows */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-7 items-stretch">
+        {/* Mobile View: Swiper Carousel */}
+        <div className="block sm:hidden">
+          {!isMounted ? (
+            <div className="flex gap-4 overflow-x-auto pb-4 snap-x no-scrollbar">
+              {solutions.map((item) => (
+                <div key={item.id} className="min-w-[85vw] snap-center">
+                  <SolutionCard solution={item} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              onBeforeInit={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              loop={true}
+              speed={600}
+              grabCursor={true}
+              autoplay={{
+                delay: 3600,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
+              }}
+              spaceBetween={16}
+              slidesPerView={1.15}
+              breakpoints={{
+                480: {
+                  slidesPerView: 1.45,
+                  spaceBetween: 18,
+                },
+              }}
+              className="!pb-12 !pt-1 [&_.swiper-wrapper]:items-stretch [&_.swiper-pagination-bullet-active]:!bg-[#0078BF] [&_.swiper-pagination-bullet]:!bg-[#0078BF]/30"
+            >
+              {solutions.map((item) => (
+                <SwiperSlide key={item.id} className="!h-auto flex">
+                  <div className="w-full h-full flex flex-col">
+                    <SolutionCard solution={item} />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+        </div>
+
+        {/* Tablet & Desktop View: 8 Solutions Grid (2 columns on sm, 4 columns on lg) */}
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-7 items-stretch">
           {solutions.map((item) => (
             <SolutionCard key={item.id} solution={item} />
           ))}
@@ -117,3 +182,4 @@ export default function SolutionsSection({
     </section>
   );
 }
+
